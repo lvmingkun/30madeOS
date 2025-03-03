@@ -1,0 +1,36 @@
+快捷键：
+    命令行多开：shift + F2
+    程序命令强制关闭：shift + F1 或鼠标点击×
+    程序窗口切换：tab
+    将最底层窗口翻到最上层：win
+
+命令：
+    文件目录：ls
+    退出命令行：exit
+    查看系统内存：mem
+    查看当前任务级别：task
+    清屏：cls
+    查看文件内容：cat 文件名.文件扩展名
+    另外开一个命令行运行程序：start 文件名
+    运行程序：ncst 文件名
+    切换语言模式：langmode 0（英文） 3（中文） 1（日文） 2（euc格式日文）
+
+    测试应用程序：
+        输出大写A：a
+        输出hello或hello world：hello3 hello4 hello5
+        输出一个高级图片：bball
+        计算器：calc 1+2*3+4*(-3)%6, 运算符包括+-*/%&^|~<<>>,结果为十进制与十六进制两种形式
+        蜂鸣器发声：beepdown
+        测试语言模式：chklang，不同模式输出不同结果; iroha, 测试日文
+        输出调色板：color color2
+        查看图片：gview 文件名.bmp/jpg，两个图片night.bmp fujisan.jpg
+        游戏：invader，空格发射，左键右键控制移动; walk, 上下左右键移动
+        输出素数：sosu sosu2 sosu3
+        画直线：lines
+        画星星：stars star1 stars2
+        播放器：mmlplay 文件名.mml，四个mml kirakira fujisan daigo daiku
+        定时器：noodle
+        几个奇奇怪怪窗口：winhelo winhelo2 winhelo3 notrec
+        文本查看：vim 文件名.文件扩展名， 后面跟-w100代表窗口宽度100（最大126），-h表示行数,最大45，
+        -t指定制表符大小，按q退出，按上下左右可以上下滚动，按a~f（纵向）或大写A~F（横向）改变纵向横向滚动速度
+

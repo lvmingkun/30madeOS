@@ -1,0 +1,18 @@
+     1 00000000                                 [INSTRSET "i486p"]
+     2 00000000                                 [BITS 32]
+     3 00000000 B9 0000001F                         MOV ECX, msg
+     4 00000005 BA 00000001                         MOV EDX, 1
+     5 0000000A                                 
+     6 0000000A                                 putloop: 
+     7 0000000A 2E 8A 01                            MOV AL, [CS:ECX]
+     8 0000000D 3C 00                               CMP AL, 0
+     9 0000000F 74 07                               JE fin
+    10 00000011 CD 40                               int 0x40
+    11 00000013 83 C1 01                            ADD ECX, 1
+    12 00000016 EB F2                               JMP putloop
+    13 00000018                                 fin:
+    14 00000018 BA 00000004                         MOV EDX, 4
+    15 0000001D CD 40                               INT 0x40
+    16 0000001F                                 msg:
+    17 0000001F 46 48 2D 4F 53 00                  DB "FH-OS", 0
+    18 00000025                                 

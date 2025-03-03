@@ -1,0 +1,13 @@
+     1 00000000                                 [FORMAT "WCOFF"]				; 生成对象文件的模式	
+     2 00000000                                 [INSTRSET "i486p"]				; 使用 486 兼容模式
+     3 00000000                                 [BITS 32]						; 使用 32 位模式机器语言
+     4 00000000                                 [FILE "api020.nas"]				; 源文件信息名
+     5 00000000                                 
+     6 00000000                                     GLOBAL _api_beep
+     7 00000000                                 
+     8                                          [SECTION .text]
+     9 00000000                                 _api_beep:  		; void api_beep(int tone)
+    10 00000000 BA 00000014                     	MOV	EDX, 20
+    11 00000005 8B 44 24 04                     	MOV EAX, [ESP + 4]
+    12 00000009 CD 40                           	INT 0x40
+    13 0000000B C3                              	RET

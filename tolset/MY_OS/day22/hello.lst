@@ -1,0 +1,30 @@
+     1 00000000                                 [FORMAT "WCOFF"]
+     2 00000000                                 [INSTRSET "i486p"]
+     3 00000000                                 [BITS 32]
+     4 00000000                                 [FILE "hello.nas"]
+     5 00000000                                 
+     6 00000000                                     GLOBAL _HariMain, _putloop, _fin
+     7 00000000                                 
+     8                                          [section .text]
+     9 00000000                                 
+    10 00000000                                 _HariMain:
+    11 00000000 B9 [00000000]                       MOV ECX, msg
+    12 00000005 BA 00000001                         MOV EDX, 1
+    13 0000000A                                 
+    14 0000000A                                 _putloop:
+    15 0000000A 2E 8A 01                            MOV AL, [CS:ECX]
+    16 0000000D 3C 00                               CMP AL, 0
+    17 0000000F 74 07                               JE _fin
+    18 00000011 CD 40                               int 0x40
+    19 00000013 83 C1 01                            ADD ECX, 1
+    20 00000016 EB F2                               JMP _putloop
+    21 00000018                                 
+    22 00000018                                 _fin:
+    23 00000018 BA 00000004                         MOV EDX, 4
+    24 0000001D CD 40                               INT 0x40
+    25 0000001F                                 
+    26                                          [section .data]
+    27 00000000                                 
+    28 00000000                                 msg:
+    29 00000000 46 48 2D 4F 53 00                  DB "FH-OS", 0
+    30 00000006                                 

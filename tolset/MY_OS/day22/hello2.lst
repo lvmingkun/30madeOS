@@ -1,0 +1,19 @@
+     1 00000000                                 [FORMAT "WCOFF"]
+     2 00000000                                 [INSTRSET "i486p"]
+     3 00000000                                 [BITS 32]
+     4 00000000                                 [FILE "hello2.nas"]
+     5 00000000                                 
+     6 00000000                                     GLOBAL _HariMain
+     7 00000000                                     
+     8                                          [section .text]
+     9 00000000                                 
+    10 00000000                                 _HariMain:
+    11 00000000 BA 00000002                     	MOV	EDX, 2
+    12 00000005 BB [00000000]                   	MOV	EBX, msg
+    13 0000000A CD 40                           	INT	0x40
+    14 0000000C BA 00000004                     	MOV EDX, 4
+    15 00000011 CD 40                               INT 0x40
+    16 00000013                                 
+    17                                          [section .data]
+    18 00000000                                 msg:
+    19 00000000 46 48 2D 4F 53 00               	DB "FH-OS", 0
